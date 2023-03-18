@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import useOnClickOutside from '../../HelperFuncs/useOnClickOutside';
 // css
 import './MenuList.css'
-import logo from '/Users/caiofreitas/Desktop/CAPSTONE PROJECT/proma_project_manager/src/images/abstract.png'
+import logo from '../components/abstract.png'
 // redux
 import { useSelector } from 'react-redux';
 // child components

@@ -1,12 +1,8 @@
 import { React, useState } from 'react'
-// child components import
-// import ClientInfo from './ClientInfo'
-// import ClientInfoEditor from './ClientInfoEditor';
-// import ProjectsSummary from './ProjectsSummary';
-import ClientInfo from '/Users/caiofreitas/Desktop/CAPSTONE PROJECT/proma_project_manager/src/InvoiceEditor/SideBarComponents/ClientInfo.js'
-import ClientInfoEditor from '/Users/caiofreitas/Desktop/CAPSTONE PROJECT/proma_project_manager/src/InvoiceEditor/SideBarComponents/ClientInfoEditor.js'
-import ProjectsSummary from '/Users/caiofreitas/Desktop/CAPSTONE PROJECT/proma_project_manager/src/InvoiceEditor/SideBarComponents/ProjectsSummary.js'
 
+import ClientInfo from '../InvoiceEditor/SideBarComponents/ClientInfo';
+import ClientInfoEditor from '../InvoiceEditor/SideBarComponents/ClientInfoEditor'
+import ProjectsSummary from '../InvoiceEditor/SideBarComponents/ProjectsSummary'
 // mui imports
 import { Link } from 'react-router-dom';
 
