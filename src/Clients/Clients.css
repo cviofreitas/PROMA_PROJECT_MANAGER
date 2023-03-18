@@ -1,0 +1,14 @@
+.ClientsContainer {
+    padding: 10px 5vw 0 5vw;
+
+}
+
+.ClientSummaryCard {
+    background: linear-gradient(var(--darkBlue), var(--darkestBlue));
+    height: fit-content;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px rgba(35, 41, 63, 0.189);
+    color: white;
+}

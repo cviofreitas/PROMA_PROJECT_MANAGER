@@ -1,13 +1,249 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --darkestBlue: rgba(1, 45, 63, 1);
+    --darkBlue: rgba(2, 73, 89, 1);
+    --blue: rgba(2, 103, 114, 1);
+    --lightBlue: rgba(59, 165, 165, 1);
+    --lightGray: rgb(240, 240, 240);
+    --lighterGray: rgba(244, 244, 244);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.leftAlign {
+    align-self: flex-start;
+}
+
+.leftJustify {
+    justify-self: flex-start;
+}
+
+.rightAlign {
+    align-self: flex-end;
+}
+
+.rightJustify {
+    justify-self: flex-end;
+}
+
+body {
+    background-color: var(--lighterGray);
+    font-family: 'Roboto', sans-serif;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    color: var(--darkestBlue);
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+
+.mainContent {
+    position: absolute;
+    top: 75px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+h5 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+h6 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+.FlexColumn {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.Grid {
+    display: grid;
+    margin: auto;
+    min-height: fit-content;
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+}
+
+.FlexRow {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.FlexCenter {
+    align-items: center;
+    justify-items: center;
+}
+
+.FlexBetween {
+    justify-content: space-between;
+}
+
+.Header {
+    text-align: center;
+}
+
+
+
+.PageHeader {
+    position: fixed;
+    left: 50vw;
+    transform: translateX(-50%);
+    top: 0px;
+    height: 75px;
+    z-index: 20;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.MarginTop10 {
+    margin-top: 10px;
+}
+
+.MarginTop20 {
+    margin-top: 20px;
+}
+
+.MarginBottom20 {
+    margin-bottom: 20px;
+}
+
+.MarginBottom10 {
+    margin-bottom: 10px;
+}
+
+.MarginRight10 {
+    margin-right: 10px;
+}
+
+.MarginLeft10 {
+    margin-left: 10px;
+}
+
+.MarginLeft20 {
+    margin-left: 20px;
+}
+
+.MarginRight20 {
+    margin-right: 20px;
+}
+
+.BackButton {
+    text-decoration: none;
+    color: var(--darkestBlue);
+    margin: 0;
+}
+
+.BackButton:hover {
+    color: var(--lightBlue);
+}
+
+.MarginAuto {
+    margin: auto;
+}
+
+.PopUpBackground {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(29, 38, 45, 0.604);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.BorderLightGray {
+    border: 1px solid lightgray;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+.Padding20 {
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    .MobileColumn {
+        flex-direction: column;
+    }
+
+
 }

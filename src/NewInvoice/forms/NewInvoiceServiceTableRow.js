@@ -1,0 +1,151 @@
+import { React, useState, useEffect } from 'react'
+// mui iports
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import InputAdornment from '@mui/material/InputAdornment';
+
+var formatterUSD = new Intl.NumberFormat('en-US', {
+    style: "currency",
+    currency: 'USD',
+    maximumFractionDigits: 2,
+});
+
+
+const NewInvoiceServiceTableRow = ({ service, index, setProjectFormState, projectFormState }) => {
+
+    let editedServiceId = service.id
+
+    const [editMode, setEditMode] = useState(false)
+
+    const [serviceData, setServiceData] = useState({
+        id: service.id,
+        service: service.service,
+        description: service.description,
+        qty: service.qty,
+        rate: service.rate,
+    })
+
+    const serviceTotal = formatterUSD.format(service.rate * service.qty)
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setServiceData(data => ({
+            ...data,
+            [name]: value
+        }
+        ))
+    }
+    // when edit form is saved: setProjectFormState to updated with new service info
+    const handleSubmit = () => {
+        setEditMode(false)
+        setProjectFormState({
+            ...projectFormState,
+            services: projectFormState.services.map(service => {
+
+                if (service.id == editedServiceId) {
+                    console.log('match')
+                    return serviceData
+                } else return service
+            })
+        })
+    }
+
+
+    const handleDelete = () => {
+        setEditMode(false)
+        setProjectFormState({
+            ...projectFormState,
+            services: projectFormState.services.filter(service =>
+                service.id != editedServiceId
+            )
+        })
+    }
+
+    return (
+        <div className='ServiceSummary FlexRow FlexBetweens'>
+            <p className='rowNum'>{index + 1}</p >
+            <p className='service'>{service.service}</p >
+            <p className='description'>{service.description}</p >
+            <p className='qty'>{service.qty}</p >
+            <p className='rate'>{formatterUSD.format(service.rate)}</p >
+            <p className='amount'>{serviceTotal}</p >
+
+            <Button
+                id={serviceData.serviceId}
+                className='RowButton'
+                onClick={() => {
+                    setEditMode(true)
+                }}>
+                <EditIcon />
+            </Button>
+
+
+            <Button
+                className='RowButton'
+                onClick={handleDelete}>
+                <DeleteIcon />
+            </Button>
+
+            {editMode ?
+                <div className='PopUpBackground'>
+                    <form className='InfoForm'>
+                        <TextField
+                            className='FormInput'
+                            variant='outlined' name='service'
+                            label='Service'
+                            value={serviceData.service}
+                            type='text'
+                            onChange={handleChange} />
+                        <TextField
+                            className='FormInput'
+                            variant='outlined' name='description'
+                            label='Description'
+                            value={serviceData.description}
+                            type=''
+                            onChange={handleChange} />
+
+                        <div className='FlexRow'>
+                            <TextField
+                                className='FormInput'
+                                variant='outlined' name='qty'
+                                label='QTY'
+                                value={serviceData.qty}
+                                type='number'
+                                onChange={handleChange} />
+                            <TextField
+                                className='FormInput'
+                                variant='outlined' name='rate'
+                                label='Rate'
+                                value={serviceData.rate}
+                                InputProps={{
+                                    startAdornment: <InputAdornment position="start">$</InputAdornment>,
+                                }}
+                                type='number'
+                                onChange={handleChange} />
+                        </div>
+                        <div className='MarginLeft10 MarginBottom10'>
+                            <h6>
+                                Amount
+                            </h6>
+                            <h5>
+                                {formatterUSD.format(serviceData.rate * serviceData.qty)}
+                            </h5>
+                        </div>
+                        <Button
+                            className='SaveButton'
+                            onClick={() => handleSubmit()}>
+                            save
+                        </Button>
+
+
+                    </form>
+                </div> : <></>
+            }
+        </div>
+
+    )
+}
+
+export default NewInvoiceServiceTableRow

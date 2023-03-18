@@ -1,0 +1,67 @@
+.MenuCard {
+    background-color: white;
+    overflow: hidden;
+}
+
+.Links {
+    color: var(--darkestBlue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+}
+
+.header>h2 {
+    margin: auto;
+    position: relative;
+    left: 5%;
+}
+
+.userWelcome {
+    font-size: 1.2rem;
+    width: 150px;
+    padding-right: 1vw;
+    text-align: right;
+}
+
+.CompanyInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5vw;
+}
+
+.userWelcomeLeft {
+    font-size: 1.2rem;
+    width: 150px;
+    padding-left: 3vw;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .menuIcon {
+        position: relative;
+        margin: auto;
+        justify-self: flex-start;
+
+    }
+
+    .userWelcome {
+        display: none;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+    }
+
+}

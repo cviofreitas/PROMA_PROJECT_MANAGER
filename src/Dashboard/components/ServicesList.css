@@ -1,0 +1,24 @@
+.ServiceListContainer {
+    position: relative;
+    top: 3px;
+    height: 187px;
+    overflow: hidden;
+    background-color: white;
+    border: none;
+    padding: none;
+    margin: none;
+    max-height: 185px
+}
+
+.ServiceListContainer>div:nth-child(even) {
+    background-color: var(--lightGray);
+}
+
+.ServiceListContainer>div>h4 {
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.ServiceList {
+    padding: 8px;
+}

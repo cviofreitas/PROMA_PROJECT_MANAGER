@@ -1,0 +1,52 @@
+.ClientInfoContainer {
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 25px;
+}
+
+
+
+.EditButtons {
+    color: white !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    border-radius: 50% !important;
+    background-color: var(--darkBlue) !important;
+    scale: .7;
+}
+
+.SaveButton {
+    color: white !important;
+    margin-left: 10px !important;
+    background-color: var(--darkBlue) !important;
+
+}
+
+.InfoForm {
+    width: 400px;
+    background: linear-gradient(90deg, var(--lightGray), var(--lighterGray));
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.FormInput {
+    margin: 30px;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    margin: 10px !important;
+    width: 380px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .ClientInfoContainer .MarginTop10 {
+        margin-top: 5px;
+    }
+
+    .InfoForm {
+        scale: .85;
+    }
+
+}

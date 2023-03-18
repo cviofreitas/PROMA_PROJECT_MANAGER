@@ -1,0 +1,154 @@
+@keyframes fadeIn {
+    from {
+        opacity: .2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.SummaryCard {
+    background-color: white;
+    height: 425px;
+    width: auto;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+    border: 1px solid var(--lightGray);
+    display: flex;
+    z-index: 1;
+    min-height: fit-content;
+    color: var(--darkestBlue);
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 10px rgb(32 45 97 / 16%);
+    background-color: rgb(255, 255, 255);
+    animation: fadeIn .4s;
+    animation-timing-function: ease-in-out;
+}
+
+.statusBar {
+    content: '';
+    width: 5px;
+    height: 100%;
+    margin: 0;
+}
+
+.infoContainer {
+    width: 99%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+
+.Breakdown {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Totals.Right {
+    text-align: right;
+}
+
+.Totals>* {
+    margin: 2px;
+}
+
+.DueDate {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.Breakdown>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.Breakdown>div>h5 {
+    font-weight: 200;
+    width: 100%;
+}
+
+.ServicesContainer {
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--lightGray);
+    justify-self: flex-end;
+    align-self: flex-end;
+
+}
+
+.ServicesContainer>div>h3 {
+    font-size: 1rem;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.ServicesContainer>div>h4 {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.ServicesTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.ServicesTitle>h3 {
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .SummaryCard {
+        height: 150px;
+        transition: all .7s;
+        /* height: min-content; */
+    }
+
+    .summaryHeader {
+        width: 65%;
+    }
+
+    .summaryHeader h3 {
+        height: 30px;
+        overflow-x: hidden;
+    }
+
+    .ServiceListContainer {
+        display: none;
+        transition: all .7s;
+    }
+
+    .SummaryCard:hover {
+        height: 360px;
+        overflow: hidden;
+    }
+
+    .SummaryCard:hover .ServiceListContainer {
+        display: block;
+    }
+
+    .DueDate {
+        text-align: right;
+        position: relative;
+        display: block;
+        top: -110px;
+        right: 0px;
+    }
+
+    .ServicesContainer {
+        position: relative;
+        top: -60px;
+    }
+}

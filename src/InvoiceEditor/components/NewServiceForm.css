@@ -1,0 +1,30 @@
+.NewServiceForm {
+    background-color: var(--lightGray);
+    padding: 10px 10px 10px 10px;
+    color: white !important;
+    border: none;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.serviceForm {
+    border-color: white !important;
+    width: 15% !important;
+}
+
+.descriptionForm {
+    width: 45% !important;
+}
+
+.qtyForm {
+    width: 10% !important;
+}
+
+.rateForm {
+    width: 15% !important;
+}
+
+.amountForm {
+    width: 15% !important;
+}

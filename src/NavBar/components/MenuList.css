@@ -1,0 +1,18 @@
+.MenuListHeader {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    letter-spacing: 2px;
+}
+
+.companylogo {
+    max-width: 30px;
+
+}
+
+.MenuListContainer {
+
+    height: 88vh
+}

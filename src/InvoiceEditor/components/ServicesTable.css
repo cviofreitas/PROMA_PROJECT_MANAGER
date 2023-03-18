@@ -1,0 +1,148 @@
+.servicesTableContainer {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 05px 10px 40px rgba(133, 133, 133, 0.447);
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+}
+
+
+.TableTitle {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+}
+
+.CustomTableHeader {
+    margin-bottom: 5px;
+
+}
+
+.CustomTableHeader h5 {
+    font-size: 1rem;
+}
+
+.ServiceSummary {
+    height: 50px;
+    border-bottom: solid 1px lightgray;
+    align-items: center;
+}
+
+.rowNum {
+    min-width: 5% !important;
+    text-align: center;
+    margin: none;
+}
+
+.service {
+    width: 15% !important;
+    margin: 0px;
+}
+
+
+
+.description {
+    width: 42% !important;
+    margin: 0px;
+    background-color: white;
+}
+
+.qty {
+    min-width: 6% !important;
+    text-align: center;
+    margin: 0px;
+}
+
+.rate {
+    min-width: 12% !important;
+    margin: 0px;
+    text-align: right;
+}
+
+.amount {
+    min-width: 12% !important;
+    margin: 0px;
+    text-align: right;
+}
+
+.RowButton {
+    color: gray !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    border-radius: 50% !important;
+    scale: .7 !important;
+}
+
+.ServiceSummaryMobile * {
+    display: none;
+}
+
+.Mobile {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 750px) {
+    .servicesTableContainer {
+        display: none;
+    }
+
+    .ServiceSummaryMobile * {
+        display: block
+    }
+
+    #AddService {
+        width: calc(100vw - 10vw);
+        font-size: 1.6rem;
+        background: linear-gradient(90deg, var(--darkBlue), var(--darkestBlue));
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        position: sticky;
+        top: 90px;
+        z-index: 3;
+        box-shadow: 0px 5px 15px rgba(42, 48, 71, 0.634);
+
+    }
+
+    .Mobile {
+        display: block;
+    }
+
+    .ServiceCardContainer {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 0;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .MobileCardContainer {
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        max-height: fit-content;
+        margin-bottom: 20px;
+        box-shadow: 5px 5px 10px rgba(32, 45, 97, 0.159);
+    }
+
+    .BottomCard {
+        position: relative;
+        background: linear-gradient(10deg, var(--lightBlue), rgba(59, 165, 165, 0.768));
+        border-radius: 0px 0px 10px 10px;
+        padding: 10px 20px 10px 20px;
+        z-index: 0;
+    }
+
+    .BottomCard .RowButton {
+        color: var(--darkBlue) !important;
+        scale: 1.04 !important;
+        margin-left: 5px !important;
+    }
+
+    #indexNumber {
+        color: lightgray;
+    }
+}
