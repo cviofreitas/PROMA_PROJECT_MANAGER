@@ -20,12 +20,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({
-    // reducer: persistedReducer,
-    reducer: {
-        userProfile: userProfileReducer,
-        clients: clientsReducer,
-        date: dateReducer
-    },
+    reducer: persistedReducer,
     devTools: process.env.NODE_ENV !== 'production',
     middleware: [thunk]
 })
