@@ -15,6 +15,13 @@
     justify-self: flex-start;
 }
 
+.Gap20{
+    gap: 20px
+}
+.Gap10 {
+    gap: 10px;
+}
+
 .rightAlign {
     align-self: flex-end;
 }

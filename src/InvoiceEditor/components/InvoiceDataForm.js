@@ -61,16 +61,16 @@ const InvoiceDataForm = ({ project, setEditMode, client }) => {
                 onSubmit={handleSubmit}>
 
                 <TextField
-                    className='FormInput'
+                    className='FormInput fullWidthInput'
                     variant='outlined'
                     label='Project Name'
                     value={projectName}
                     onChange={(e) => { setProjectName(e.target.value) }} />
 
-                <div className='DatesPicker FlexRow'>
+                <div className='DatesPicker FlexRow Gap10 MarginTop10'>
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DatePicker
-                            className='dateInput'
+                            className='dateInput fullWidthInput'
                             views={['month', 'day', 'year']}
                             label='Sent date'
                             openTo="month"
@@ -82,7 +82,7 @@ const InvoiceDataForm = ({ project, setEditMode, client }) => {
 
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DatePicker
-                            className='dateInput'
+                            className='dateInput fullWidthInput'
                             views={['month', 'day', 'year']}
                             label='Due date'
                             openTo="month"
@@ -93,9 +93,9 @@ const InvoiceDataForm = ({ project, setEditMode, client }) => {
                     </LocalizationProvider>
                 </div>
 
-                <div className='FlexRow'>
+                <div className='FlexRow MarginTop10'>
                     <TextField
-                        className='FormInput'
+                        className='FormInput fullWidthInput'
                         variant='outlined'
                         label='Amount Paid'
                         type='number'
@@ -107,7 +107,7 @@ const InvoiceDataForm = ({ project, setEditMode, client }) => {
                     />
 
                 </div>
-                <div className='MarginLeft10'>
+                <div className='MarginTop10'>
                     <h6>
                         Balance
                     </h6>

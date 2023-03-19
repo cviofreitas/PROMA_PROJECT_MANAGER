@@ -89,22 +89,24 @@ const ServiceTableRow = ({ service, projectId, client, index }) => {
             {editMode ?
                 <div className='PopUpBackground'>
                     <form className='InfoForm'>
-                        <TextField
-                            className='FormInput'
-                            variant='outlined' name='service'
-                            label='Service'
-                            value={serviceData.service}
-                            type='text'
-                            onChange={handleChange} />
-                        <TextField
-                            className='FormInput'
-                            variant='outlined' name='description'
-                            label='Description'
-                            value={serviceData.description}
-                            type=''
-                            onChange={handleChange} />
+                        <div className='FlexColumn Gap10'>
+                            <TextField
+                                className='FormInput'
+                                variant='outlined' name='service'
+                                label='Service'
+                                value={serviceData.service}
+                                type='text'
+                                onChange={handleChange} />
+                            <TextField
+                                className='FormInput'
+                                variant='outlined' name='description'
+                                label='Description'
+                                value={serviceData.description}
+                                type=''
+                                onChange={handleChange} />
+                        </div>
 
-                        <div className='FlexRow'>
+                        <div className='FlexRow MarginTop10 Gap10'>
                             <TextField
                                 className='FormInput'
                                 variant='outlined' name='qty'
@@ -123,7 +125,7 @@ const ServiceTableRow = ({ service, projectId, client, index }) => {
                                 type='number'
                                 onChange={handleChange} />
                         </div>
-                        <div className='MarginLeft10 MarginBottom10'>
+                        <div className='MarginTop10 MarginBottom10'>
                             <h6>
                                 Amount
                             </h6>

@@ -40,9 +40,9 @@ const ClientInfoEditor = ({ client, setEditMode }) => {
         <div className='PopUpBackground'>
             <form className='InfoForm'>
 
-                <div className='FlexRow'>
+                <div className='FlexRow Gap10'>
                     <TextField
-                        className='FormInput'
+                        className='FormInput fullWidthInput'
                         variant='outlined'
                         label="First Name"
                         name='first'
@@ -52,7 +52,7 @@ const ClientInfoEditor = ({ client, setEditMode }) => {
                         })}
                     />
                     <TextField
-                        className='FormInput'
+                        className='FormInput fullWidthInput'
                         variant='outlined'
                         label="Last Name"
                         name='last'
@@ -64,31 +64,31 @@ const ClientInfoEditor = ({ client, setEditMode }) => {
                     />
                 </div>
 
-                <TextField
-                    className='FormInput'
-                    variant='outlined'
-                    label="Street"
-                    name='street'
-                    value={formState.address.street}
-                    onChange={(e) => dispatch({
-                        type: updateClientAddress, name: e.target.name, value: e.target.value
-                    })}
-
-                />
-                <TextField
-                    className='FormInput'
-                    variant='outlined'
-                    label="City"
-                    name='city'
-                    value={formState.address.city}
-                    onChange={(e) => dispatch({
-                        type: updateClientAddress, name: e.target.name, value: e.target.value
-                    })}
-
-                />
-                <div className='FlexRow'>
+                <div className='MarginTop10 FlexColumn Gap10'>
+                    <TextField
+                        className='FormInput '
+                        variant='outlined'
+                        label="Street"
+                        name='street'
+                        value={formState.address.street}
+                        onChange={(e) => dispatch({
+                            type: updateClientAddress, name: e.target.name, value: e.target.value
+                        })}
+                    />
                     <TextField
                         className='FormInput'
+                        variant='outlined'
+                        label="City"
+                        name='city'
+                        value={formState.address.city}
+                        onChange={(e) => dispatch({
+                            type: updateClientAddress, name: e.target.name, value: e.target.value
+                        })}
+                    />
+                </div>
+                <div className='FlexRow Gap10 MarginTop10'>
+                    <TextField
+                        className='FormInput fullWidthInput'
                         variant='outlined'
                         select
                         label="State"
@@ -107,7 +107,7 @@ const ClientInfoEditor = ({ client, setEditMode }) => {
                         ))}
                     </TextField>
                     <TextField
-                        className='FormInput'
+                        className='FormInput fullWidthInput'
                         variant='outlined'
                         label="Zip Code"
                         name='zipCode'
@@ -118,7 +118,7 @@ const ClientInfoEditor = ({ client, setEditMode }) => {
 
                     />
                 </div>
-                <div className='FlexColumn'>
+                <div className='FlexColumn MarginTop10 Gap10'>
                     <TextField
                         className='FormInput'
                         variant='outlined'
@@ -143,7 +143,7 @@ const ClientInfoEditor = ({ client, setEditMode }) => {
 
                     />
                 </div>
-                <div>
+                <div className='FlexRow MarginTop10'>
                     <Button className='SaveButton'
                         onClick={() => handleSubmit()}
                     >

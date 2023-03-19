@@ -19,7 +19,7 @@ import { useSelector } from 'react-redux';
 // child components
 import UserDisplay from './UserDisplay';
 
-const MenuList = ({ toggleDrawer, changePageHeader, closeMenu }) => {
+const MenuList = ({ toggleDrawer, closeMenu }) => {
 
     const profile = useSelector(state => state.userProfile)
 

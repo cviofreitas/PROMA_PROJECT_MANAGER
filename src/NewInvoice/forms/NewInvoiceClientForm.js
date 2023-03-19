@@ -75,7 +75,7 @@ const NewInvoiceClientForm = ({ formState, dispatch, initialState, existingClien
                 </button>
             </div>
             <form >
-                <div className='FlexRow FlexCenter'>
+                <div className='FlexRow FlexCenter Gap10'>
                     {
                         existingClient ? <>
                             {/* Autocomplete allows user to select an exisiting client and autofills the rest of the form */}
@@ -86,9 +86,7 @@ const NewInvoiceClientForm = ({ formState, dispatch, initialState, existingClien
                                 options={clientNames}
                                 size="small"
                                 sx={{
-                                    width: '200px',
-                                    marginLeft: '10px',
-                                    marginBottom: '10px'
+                                    width: '50%',
                                 }}
                                 value={value}
                                 onChange={(event, newValue) => {
@@ -117,6 +115,7 @@ const NewInvoiceClientForm = ({ formState, dispatch, initialState, existingClien
                         </> :
                             <>
                                 <TextField
+                                    className='fullWidthInput'
                                     margin="none"
                                     size='small'
                                     variant='standard'
@@ -130,6 +129,7 @@ const NewInvoiceClientForm = ({ formState, dispatch, initialState, existingClien
                                     })}
                                 />
                                 <TextField
+                                    className='fullWidthInput'
                                     required={true}
                                     error={formState.customerName.last.length < 2 && required}
                                     margin="none"
@@ -146,36 +146,42 @@ const NewInvoiceClientForm = ({ formState, dispatch, initialState, existingClien
                     }
                 </div>
 
-                <TextField
-                    disabled={existingClient}
-                    margin="none"
-                    className='fullWidthInput'
-                    size='small'
-                    variant='standard'
-                    label="Street"
-                    name='street'
-                    value={formState.address.street}
-                    onChange={(e) => dispatch({
-                        type: updateClientAddress, name: e.target.name, value: e.target.value
-                    })}
-                />
+                <div className='MarginTop10'>
+                    <TextField
+                        disabled={existingClient}
+                        margin="none"
+                        className='fullWidthInput'
+                        size='small'
+                        variant='standard'
+                        label="Street"
+                        name='street'
+                        value={formState.address.street}
+                        onChange={(e) => dispatch({
+                            type: updateClientAddress, name: e.target.name, value: e.target.value
+                        })}
+                    />
+                </div>
 
-                <TextField
-                    disabled={existingClient}
-                    margin="none"
-                    className='fullWidthInput'
-                    size='small'
-                    variant='standard'
-                    label="City"
-                    name='city'
-                    value={formState.address.city}
-                    onChange={(e) => dispatch({
-                        type: updateClientAddress, name: e.target.name, value: e.target.value
-                    })}
-                />
-                <div className='FlexRow'>
+
+                <div className='MarginTop10'>
+                    <TextField
+                        disabled={existingClient}
+                        margin="none"
+                        className='fullWidthInput'
+                        size='small'
+                        variant='standard'
+                        label="City"
+                        name='city'
+                        value={formState.address.city}
+                        onChange={(e) => dispatch({
+                            type: updateClientAddress, name: e.target.name, value: e.target.value
+                        })}
+                    />
+                </div>
+                <div className='FlexRow FlexBetween Gap10 MarginTop10'>
 
                     <TextField
+                        sx={{ width: '50%' }}
                         disabled={existingClient}
                         margin="none"
                         size='small'
@@ -197,6 +203,7 @@ const NewInvoiceClientForm = ({ formState, dispatch, initialState, existingClien
                         ))}
                     </TextField>
                     <TextField
+                        sx={{ width: '50%' }}
                         disabled={existingClient}
                         margin="none"
                         size='small'
@@ -209,7 +216,7 @@ const NewInvoiceClientForm = ({ formState, dispatch, initialState, existingClien
                         })}
                     />
                 </div>
-                <div className='FlexColumn EmailPhoneInputs'>
+                <div className='FlexColumn EmailPhoneInputs Gap10 MarginTop10' >
                     <TextField
                         disabled={existingClient}
                         className='fullWidthInput'

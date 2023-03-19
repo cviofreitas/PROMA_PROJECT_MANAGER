@@ -15,12 +15,12 @@ const UserDisplay = ({ inverted }) => {
                         {profile.companyName}
                     </h3>
                 </> :
-                <>
+                <div className='FlexRow FlexCenter' style={{ paddingRight: '5vw' }}>
                     <h3 className='userWelcome'>
                         {profile.companyName}
                     </h3>
                     <Avatar alt={`avatar of ${profile.name.first} ${profile.name.last}`} src={profile.avatar} />
-                </>
+                </div>
 
             }
 

@@ -63,7 +63,8 @@ const NewInvoiceServiceCardsMobile = ({ service, index, setProjectFormState, pro
 
 
     return (
-        <div className='ServiceSummaryMobile FlexColumn FlexBetweens '>
+        <div className='ServiceSummaryMobile FlexColumn FlexBetweens '
+            id='show'>
             <div className='MobileCardContainer'>
                 <div className='ServiceCardContainer'>
                     <div className='FlexRow FlexCenter FlexBetween'>

@@ -19,7 +19,7 @@
 
 .SaveButton {
     color: white !important;
-    margin-left: 10px !important;
+    margin-right: 10px !important;
     background-color: var(--darkBlue) !important;
 
 }
@@ -33,11 +33,6 @@
 
 .FormInput {
     margin: 30px;
-}
-
-.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
-    margin: 10px !important;
-    width: 380px !important;
 }
 
 @media only screen and (max-width: 600px) {

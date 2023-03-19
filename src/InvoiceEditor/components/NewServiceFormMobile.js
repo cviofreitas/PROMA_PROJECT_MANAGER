@@ -63,26 +63,31 @@ const NewServiceFormMobile = ({ projectId, client, project, setEditMode }) => {
 
     return (
         <div className='PopUpBackground'>
-            <form className='InfoForm'
+            <form className='InfoForm '
                 onSubmit={handleSubmit}>
-                <TextField
-                    variant='outlined'
-                    name='service'
-                    label='Service'
-                    onChange={handleChange}
-                    value={formData.service} />
-                <TextField
-                    variant='outlined'
-                    name='description'
-                    label='Description'
-                    onChange={handleChange}
-                    value={formData.description} />
-                <div className='FlexRow'>
+                <div className='FlexColumn Gap10'>
                     <TextField
+                        className='fullWidthInput'
+                        variant='outlined'
+                        name='service'
+                        label='Service'
+                        onChange={handleChange}
+                        value={formData.service} />
+                    <TextField
+                        className='fullWidthInput'
+                        variant='outlined'
+                        name='description'
+                        label='Description'
+                        onChange={handleChange}
+                        value={formData.description} />
+                </div>
+                <div className='FlexRow Gap10 MarginTop10'>
+                    <TextField
+
                         variant='outlined'
                         name='qty'
                         type='number'
-                        className='FormInput'
+                        className='FormInput fullWidthInput'
                         label='qty'
                         onChange={handleChange}
                         value={formData.qty} />
@@ -90,7 +95,7 @@ const NewServiceFormMobile = ({ projectId, client, project, setEditMode }) => {
                         variant='outlined'
                         name='rate'
                         type='number'
-                        className='FormInput'
+                        className='FormInput fullWidthInput'
                         label='rate'
                         onChange={handleChange}
                         InputProps={{
@@ -98,7 +103,7 @@ const NewServiceFormMobile = ({ projectId, client, project, setEditMode }) => {
                         }}
                         value={formData.rate} />
                 </div>
-                <div className='MarginLeft10'>
+                <div className='MarginTop10'>
                     <h6>
                         Amount
                     </h6>

@@ -139,8 +139,8 @@ const NewInvoicePage = () => {
             </div>
 
 
-            <div className='FlexRow NewInvoiceFormContainer Gap'>
-                <div className='NewInfoForm FlexColumn FlexBetween Padding20 MobileFullWidth'>
+            <div className='FlexRow NewInvoiceFormContainer'>
+                <div className='NewInfoForm FlexColumn FlexBetween Padding20 MobileFullWidth Gap20'>
                     <div className='NewInvoiceClientForm'>
                         <h3 >
                             Client Info
@@ -178,7 +178,7 @@ const NewInvoicePage = () => {
 
             </div>
 
-            <div className='Sticky MarginTop10'>
+            <div className='Sticky MarginTop20'>
                 <NewInvoiceServicesFormMobile
                     setProjectFormState={setProjectFormState}
                     projectFormState={projectFormState}

@@ -41,7 +41,7 @@ const NewInvoiceProjectForm = ({ formState, setProjectFormState, required }) => 
         <div >
 
             <form >
-                <div className='FlexRow'>
+                <div className='FlexRow '>
                     <TextField
                         className='fullWidthInput'
                         variant='standard'
@@ -52,7 +52,7 @@ const NewInvoiceProjectForm = ({ formState, setProjectFormState, required }) => 
                         onChange={(e) => { setProjectName(e.target.value) }} />
                 </div>
 
-                <div className='FlexRow'>
+                <div className='FlexRow MarginTop10'>
                     <TextField
                         className='FormInput fullWidthInput'
                         variant='standard'
@@ -66,7 +66,7 @@ const NewInvoiceProjectForm = ({ formState, setProjectFormState, required }) => 
                     />
                 </div>
 
-                <div className='DatesPicker FlexRow MarginTop20'>
+                <div className='DatesPicker FlexRow MarginTop20 Gap10'>
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DatePicker
                             variant='standard'
