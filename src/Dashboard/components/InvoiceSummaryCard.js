@@ -53,7 +53,7 @@ const InvoiceSummaryCard = (props) => {
                         <p>{formatterUSD.format(projectTotal)}</p>
                     </div>
                     <div className='Totals Right'>
-                        <h5>Paid</h5>
+                        <h5>Balance</h5>
                         <p>{formatterUSD.format(Balance)}</p>
                     </div>
 
