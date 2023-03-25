@@ -120,7 +120,6 @@ const ServiceTableRowMobile = ({ service, projectId, client, index }) => {
                             id={serviceData.serviceId}
                             className='RowButton'
                             onClick={() => {
-                                console.log(serviceData.projectId)
                                 setEditMode(true)
                             }}>
                             <EditIcon />

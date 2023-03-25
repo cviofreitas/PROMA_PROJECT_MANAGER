@@ -128,8 +128,21 @@ export const clientsSlice = createSlice({
                 }
             })
 
+        },
+        deleteInvoice: (state, action) => {
 
-            // return [...state, action.payload]
+            return state.map((client) => {
+                if (client.id == action.payload.clientId) {
+                    return {
+                        ...client,
+                        projects: [...client.projects.filter(project => project.invoiceId != action.payload.projectId)]
+                    }
+
+                } else {
+                    return client
+                }
+            })
+
         },
 
     }
@@ -142,5 +155,6 @@ export const {
     deleteProjectService,
     updateProjectInfo,
     createNewClientInvoice,
-    createExistingClientInvoice } = clientsSlice.actions
+    createExistingClientInvoice,
+    deleteInvoice } = clientsSlice.actions
 export default clientsSlice.reducer

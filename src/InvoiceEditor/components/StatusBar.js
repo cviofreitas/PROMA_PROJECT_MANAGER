@@ -7,10 +7,12 @@ import useIsOverdue from '../../HelperFuncs/useIsOverdue';
 import useGetProjectTotal from '../../HelperFuncs/useGetProjectTotal';
 // mui imports
 import PrintIcon from '@mui/icons-material/Print';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { Button } from '@mui/material';
 import ModeEditOutlineSharpIcon from '@mui/icons-material/ModeEditOutlineSharp';
 // child components import
 import InvoiceDataForm from './InvoiceDataForm';
+import InvoiceDeletionConfirmation from './InvoiceDeletionConfirmation';
 
 
 var formatterUSD = new Intl.NumberFormat('en-US', {
@@ -23,6 +25,7 @@ var formatterUSD = new Intl.NumberFormat('en-US', {
 const StatusBar = ({ projectId, client }) => {
     const project = client.projects.filter(project => project.invoiceId == projectId)[0]
     const [editMode, setEditMode] = useState(false)
+    const [deleteConfirm, setDeleteConfirm] = useState(false)
     const colors = {
         red: '#FC8C6D',
         yellow: '#F2DC7E',
@@ -143,6 +146,10 @@ const StatusBar = ({ projectId, client }) => {
                         onClick={() => setEditMode(true)}>
                         <ModeEditOutlineSharpIcon />
                     </Button>
+                    <InvoiceDeletionConfirmation
+                        project={project}
+                        client={client}
+                        setEditMode={setEditMode} />
                 </div>
 
             </div>
@@ -156,6 +163,10 @@ const StatusBar = ({ projectId, client }) => {
                     :
                     <></>
             }
+
+
+
+
         </div>
     )
 }
