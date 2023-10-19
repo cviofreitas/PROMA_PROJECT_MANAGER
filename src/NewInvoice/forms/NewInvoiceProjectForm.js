@@ -56,13 +56,13 @@ const NewInvoiceProjectForm = ({ formState, setProjectFormState, required }) => 
                     <TextField
                         className='FormInput fullWidthInput'
                         variant='standard'
-                        label='Depoosit'
+                        label='Deposit'
                         type='number'
                         InputProps={{
                             startAdornment: <InputAdornment position="start">$</InputAdornment>,
                         }}
                         value={amountPaid}
-                        onChange={(e) => { setAmountPaid(e.target.value) }}
+                        onChange={(e) => { setAmountPaid(Number(e.target.value)) }}
                     />
                 </div>
 
