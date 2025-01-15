@@ -31,7 +31,7 @@ const InvoiceEditor = () => {
                 </h2>
             </header>
 
-            <div className='InvoiceNavigation FlexRow FlexBetween MarginBottom20'>
+            <div className='InvoiceNavigation FlexRow FlexBetween MarginBottom20' >
                 <Link
                     className='BackButton FlexRow'
                     to='/'>
