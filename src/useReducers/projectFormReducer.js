@@ -40,6 +40,10 @@ const projectFormReducer = (state, action) => {
                 ...state,
                 paid: [action.value][0]
             }
+        default:
+            return {
+                state
+            }
     }
 }
 
